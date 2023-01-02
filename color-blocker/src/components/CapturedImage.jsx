@@ -67,7 +67,7 @@ const CapturedImage = ({ image, targetColor }) => {
       );
 
       // Adiciona o pixel à matriz matchingPixels se a distância for menor que 70
-      if (distance < 70) {
+      if (distance < 40) {
         matchingPixels.push(pixels[i]);
       }
     }
@@ -131,7 +131,7 @@ const CapturedImage = ({ image, targetColor }) => {
     // Limpa o canvas
     resultContext.clearRect(0, 0, 640, 480);
     // Desenha um retângulo ao redor de cada bloco
-    for (var i = 0; i < blocks.length; i++) {
+/*     for (var i = 0; i < blocks.length; i++) {
       resultContext.beginPath();
       resultContext.rect(
         blocks[i].x,
@@ -141,14 +141,24 @@ const CapturedImage = ({ image, targetColor }) => {
       );
       resultContext.fillStyle = `rgba(${blocks[i].pixels[0].r}, ${blocks[i].pixels[0].g}, ${blocks[i].pixels[0].b}, ${blocks[i].pixels[0].a})`;
       resultContext.fill();
+    } */
+
+    // Desenho um circulo ao redor de cada bloco
+    for (var i = 0; i < blocks.length; i++) {
+      resultContext.beginPath();
+      resultContext.arc(blocks[i].x, blocks[i].y, 15, 0, 2 * Math.PI);
+      resultContext.fillStyle = `rgba(${blocks[i].pixels[0].r}, ${blocks[i].pixels[0].g}, ${blocks[i].pixels[0].b}, ${blocks[i].pixels[0].a})`;
+      resultContext.fill();
     }
+
+
   }, [image, targetColor]);
 
   return (
     <>
       <canvas className="hidden" ref={imageRef} width={640} height={480} />
       <canvas
-      ref={resultRef} width={640} height={480} />
+      ref={resultRef} width={640} height={480} className="border-4 rounded-md" />
       </>
     );
   };

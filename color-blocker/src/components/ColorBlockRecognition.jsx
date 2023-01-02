@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import CapturedImage from "./CapturedImage";
+import TagIdentifier from "./TagIdentifier";
 
 /*Componente que renderiza um componente de vídeo e uma imagem em tela.
  O vídeo é obtido a partir da câmera do usuário e, a cada 100ms, uma imagem é capturada a partir dele e armazenada no estado "data".
