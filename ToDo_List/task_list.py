@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 
 
-# This is a simple Tasks List (or To_Do List) python aplication that I made in my 1st day of #100daysofcode
+# This is a simple Tasks List (or To_Do List) python aplication that I made in my ToDo_List of #100daysofcode
 
 tarefas = []  # Starting a list that will receive user´s tasks
 
