@@ -12,15 +12,7 @@ def getPermutation(n, k):
     kth_perm = ''
     for x in permutations_dict[k]:
         kth_perm += str(x)
-    return kth_perm
+    return kth_perm #final of function
 
 
-
-print(getPermutation(4,9))
-
-#
-# from itertools import permutations
-# l = permutations([1,2,3],3)
-# l = list(l)
-# print(l[0])
 
