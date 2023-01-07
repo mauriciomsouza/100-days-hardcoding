@@ -1,0 +1,15 @@
+def isPrime(n):
+    cont = 0
+    for i in range(2,n):
+        if n%i == 0: #teste de divisibilidade
+            cont += 1
+    return True if cont == 0 else False
+
+def NextPrime(n):
+        while True:
+            if isPrime(n):
+                break
+            else:
+                n+=1
+        return n 
+
