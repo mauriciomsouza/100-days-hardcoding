@@ -5,5 +5,5 @@ def FindNemo(s):
         return "I can't find Nemo!"
 
 
-s = "I am finding Nemo !"
+s = "I am finding Emo !"
 print(FindNemo(s))
